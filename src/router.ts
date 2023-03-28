@@ -37,9 +37,7 @@ export function routerPush(name: AppRouteNames, params?: RouteParams) {
 }
 
 router.beforeEach((to, from, next) => {
-  console.log('router');
-  console.log( JwtService.getToken());
-  console.log(to.path);
+
   if (
     (to.path === '/login' || from.path === 'login') &&
     JwtService.getToken() !== undefined

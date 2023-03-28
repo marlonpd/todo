@@ -16,8 +16,7 @@ class ApiService {
     return (await axiosClient.post(`api/todo`, todo))?.data;
   };
   static updateTodo = async (todo: Todo): Promise<Todo[]> => {
-    console.log('before')
-    console.log(todo)
+
     return (await axiosClient.post(`api/todo/update`, todo))?.data;
   };
   static deleteTodo = async (todo: Todo): Promise<Todo[]> => {

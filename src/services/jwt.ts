@@ -14,8 +14,6 @@ export const getToken = (): string | undefined => {
 
 export const saveToken = (token: string): void => {
 
-  console.log('--saveToken--');
-  console.log(token);
   window.localStorage.setItem(ID_TOKEN_KEY, token);
 };
 

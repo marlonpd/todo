@@ -63,13 +63,9 @@ const actions: ActionTree<State, State> & Actions = {
     return new Promise((resolve, reject) =>
       loginAccount(loginCredential)
         .then((response: any) => {
-          console.log(response);
-          console.log(response.data);
-          console.log(response.data.authorisation);
-          const token: string = response.data.authorisation.token;
-          console.log('token');
-          console.log(token);
 
+          const token: string = response.data.authorisation.token;
+          
           JwtService.saveToken(token);
           context.commit(SET_AUTH, response);
           resolve(response);

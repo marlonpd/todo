@@ -25,8 +25,7 @@ export const runPost = (
 };
 
 export const setHeader = () => {
-  console.log('setHeaderzzzzzz')
-  console.log(JwtService.getToken())
+
   if (JwtService.getToken()) {
     client.defaults.headers.common[
       'Authorization'

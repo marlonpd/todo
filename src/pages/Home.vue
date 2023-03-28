@@ -134,8 +134,7 @@ const clearSelectedTodo = () => {
   todoTitle.value = '';
 };
 const onSaveHandler = async () => {
-  console.log('on save handler');
-  console.log(todoTitle.value);
+
   if (todoTitle.value) {
 
     //add new
@@ -179,12 +178,7 @@ onMounted(() => {
 
 const logout = async () => {
 
-    window.localStorage.removeItem('id_token');
-
-
-  const token: string | null = window.localStorage.getItem('id_token');
-
-  console.log(token);
+  window.localStorage.removeItem('id_token');
 
   routerPush('login');
 };
